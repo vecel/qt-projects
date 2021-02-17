@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/pieces">
+        <file>pawn_black.svg</file>
+        <file>pawn_black-29.png</file>
+        <file>rook_white.svg</file>
+        <file>rook_white-33.png</file>
+        <file>rook_black.svg</file>
+        <file>rook_black-33.png</file>
+        <file>pawn_white.svg</file>
+        <file>pawn_white-30.png</file>
+        <file>knight_black.svg</file>
+        <file>knight_white.svg</file>
+        <file>knight_black-40.png</file>
+        <file>knight_white-40.png</file>
+        <file>queen_black.svg</file>
+        <file>queen_white.svg</file>
+        <file>queen_black-47.png</file>
+        <file>queen_white-47.png</file>
+        <file>bishop_black-42.png</file>
+        <file>bishop_white-42.png</file>
+        <file>king_black.svg</file>
+        <file>king_white.svg</file>
+        <file>king_black-41.png</file>
+        <file>king_white-40.png</file>
+        <file>bishop_black.svg</file>
+        <file>bishop_white.svg</file>
+    </qresource>
+</RCC>

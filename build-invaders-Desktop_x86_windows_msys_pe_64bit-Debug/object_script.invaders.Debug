@@ -1,0 +1,11 @@
+debug/bullet.o
+debug/enemy.o
+debug/enemyspawner.o
+debug/levelup.o
+debug/main.o
+debug/player.o
+debug/upgradeitem.o
+debug/moc_bullet.o
+debug/moc_enemy.o
+debug/moc_enemyspawner.o
+debug/moc_levelup.o

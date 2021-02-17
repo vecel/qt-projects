@@ -1,0 +1,11 @@
+release/bishop.o
+release/board.o
+release/game.o
+release/king.o
+release/knight.o
+release/main.o
+release/pawn.o
+release/queen.o
+release/rook.o
+release/tile.o
+release/qrc_res.o

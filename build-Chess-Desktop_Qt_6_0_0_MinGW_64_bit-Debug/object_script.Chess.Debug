@@ -1,0 +1,11 @@
+debug/bishop.o
+debug/board.o
+debug/game.o
+debug/king.o
+debug/knight.o
+debug/main.o
+debug/pawn.o
+debug/queen.o
+debug/rook.o
+debug/tile.o
+debug/qrc_res.o

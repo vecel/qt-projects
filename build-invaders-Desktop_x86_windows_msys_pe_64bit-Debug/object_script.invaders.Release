@@ -1,0 +1,11 @@
+release/bullet.o
+release/enemy.o
+release/enemyspawner.o
+release/levelup.o
+release/main.o
+release/player.o
+release/upgradeitem.o
+release/moc_bullet.o
+release/moc_enemy.o
+release/moc_enemyspawner.o
+release/moc_levelup.o
