@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 66.34 76.67"
+   version="1.1"
+   id="svg5350"
+   sodipodi:docname="rook_black.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata5356">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5354" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     id="namedview5352"
+     showgrid="false"
+     inkscape:zoom="8.7062582"
+     inkscape:cx="31.883783"
+     inkscape:cy="41.011649"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5350" />
+  <rect
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.27197391;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.97512434;paint-order:stroke fill markers"
+     id="rect5901"
+     width="33.76881"
+     height="10.222531"
+     x="15.850666"
+     y="22.341263" />
+  <rect
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.27197391;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.97512434;paint-order:stroke fill markers"
+     id="rect5901-8"
+     width="33.76881"
+     height="10.222531"
+     x="16.195248"
+     y="44.796375" />
+  <g
+     id="Warstwa_2"
+     data-name="Warstwa 2">
+    <g
+       id="Warstwa_1-2"
+       data-name="Warstwa 1">
+      <path
+         d="M.09,71.33l.4,5.34H65.83l.4-6.14c.4-5.73,0-6.4-6.4-12.4l-6.67-6.26v-26l5.33-5.2c4.67-4.54,5.34-6,5.34-11.34,0-7.6-1.6-9.33-9.07-9.33-4.67,0-6,.53-6.53,2.67a3.53,3.53,0,0,1-3.07,2.66,3.53,3.53,0,0,1-3.07-2.66C41.56.4,40.23,0,33.16,0s-8.4.4-8.93,2.67a3.53,3.53,0,0,1-3.07,2.66,3.53,3.53,0,0,1-3.07-2.66C17.56.53,16.23,0,11.56,0,8.36,0,5,.67,4.09,1.6S2.49,6,2.49,9.33c0,5.34.67,6.8,5.34,11.34l5.33,5.2V52.8L6.49,59.33C.36,65.47-.31,66.53.09,71.33Zm33.07-46c12.13,0,14.67.4,14.67,2s-2.54,2-14.67,2-14.67-.4-14.67-2S21,25.33,33.16,25.33Zm0,24c12.13,0,14.67.4,14.67,2s-2.54,2-14.67,2-14.67-.4-14.67-2S21,49.33,33.16,49.33Z"
+         id="path5346" />
+    </g>
+  </g>
+</svg>
