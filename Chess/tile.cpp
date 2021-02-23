@@ -1,12 +1,12 @@
 #include "tile.h"
 #include <QBrush>
+#include "board.h"
 
 #include <QDebug>
 
 Tile::Tile()
 {
     setRect(0, 0, 64, 64);
-    //    setBrush(QBrush(Qt::red));
 }
 
 void Tile::select()
@@ -19,4 +19,9 @@ void Tile::unselect()
 {
     setBrush(QBrush(Qt::white));
     selected = false;
+}
+
+bool Tile::isSelected()
+{
+    return selected;
 }

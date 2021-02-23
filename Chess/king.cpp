@@ -14,5 +14,7 @@ King::King(COLOR col, int x, int y)
 
 QList<Tile *> King::possibleMoves()
 {
+    QList<Tile *> moves;
 
+    return moves;
 }

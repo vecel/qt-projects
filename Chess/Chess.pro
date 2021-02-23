@@ -16,6 +16,7 @@ SOURCES += \
     knight.cpp \
     main.cpp \
     pawn.cpp \
+    piece.cpp \
     queen.cpp \
     rook.cpp \
     tile.cpp

@@ -12,15 +12,17 @@ class Board: public QGraphicsItemGroup
 public:
     Board(int origin_x = 144, int origin_y = 44);
 
-    // return tile at x, y coordinates
-    Tile *getTile(int x, int y);
+    Tile *getTile(int x, int y); // return tile from [x,y] coordinates
+    Piece * getPiece(int x, int y); // return piece from [x,y] coordinates
 
     // place pieces to their correct positions
     void setUpPieces();
 
+    // mouse press event for board and its tiles
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
 
-    Piece * getPiece(int x, int y);
+    // move the piece to x,y destination coordinates
+    void move(Piece* piece, int x, int y);
 
 private:
     Tile *tileBoard[8][8]; // chessboard

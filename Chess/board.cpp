@@ -14,9 +14,6 @@
 
 Board::Board(int origin_x, int origin_y)
 {
-    // set board focusable
-    setFlag(GraphicsItemFlag::ItemIsFocusable);
-
     // set up a chessboard
     for(int i = 0; i < 8; ++i){
         for(int k = 0; k < 8; ++k){
@@ -36,8 +33,18 @@ Tile *Board::getTile(int x, int y)
     return tileBoard[x][y];
 }
 
+Piece *Board::getPiece(int x, int y)
+{
+    return board[x][y];
+}
+
 void Board::setUpPieces()
 {
+    for(int i = 0; i < 8; ++i){
+        for(int k = 0; k < 8; ++k){
+            qDebug() << typeid(board[i][k]).name() << " " << i << " " << k;
+        }
+    }
     addPiece(new Rook(Piece::WHITE, 0, 7));
     addPiece(new Rook(Piece::WHITE, 7, 7));
 
@@ -74,13 +81,46 @@ void Board::setUpPieces()
 void Board::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     if(event->type() == QEvent::GraphicsSceneMousePress){
-        qDebug() << "Board: tile at: " << (int) event->pos().x() / 64 << " " << (int) event->pos().y() / 64;
+        int x = (int) event->pos().x() / 64;
+        int y = (int) event->pos().y() / 64;
+
+        qDebug() << "Board: tile at: " << x << " " << y;
+
+        // check if chosen tile is selected
+        if(getTile(x, y)->isSelected()){
+            move(game->getSelectedPiece(), x, y);
+        }
+        game->unselectTiles();
     }
 }
 
-Piece *Board::getPiece(int x, int y)
+void Board::move(Piece *piece, int x, int y)
 {
-    return board[x][y];
+    // remove piece from [x,y] if there is any
+    if(board[x][y] != nullptr){
+        delete board[x][y];
+        board[x][y] = nullptr;
+    }
+
+    // set Piece* board[x,y] pointer coordinates to piece that moves
+    board[x][y] = piece;
+
+    // set pointer from previous position to nullptr
+    board[piece->board_x][piece->board_y] = nullptr;
+
+    // move the piece
+    piece->moveBy(64 * (x - piece->board_x), 64 * (y - piece->board_y));
+
+    // update piece's coordinates
+    piece->board_x = x;
+    piece->board_y = y;
+
+    // add CASTLING (here or inside king class)
+
+    // forbid castling if rook or king is moved
+    if(typeid(piece) == typeid(Rook) || typeid(piece) == typeid(King)){
+        piece->forbidCastle();
+    }
 }
 
 void Board::addPiece(Piece *piece)

@@ -11,7 +11,6 @@ class Pawn: public Piece
 public:
     Pawn(COLOR col, int x, int y);
     QList<Tile*> possibleMoves();
-    void mousePressEvent(QGraphicsSceneMouseEvent *event);
 };
 
 #endif // PAWN_H

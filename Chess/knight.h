@@ -2,6 +2,9 @@
 #define KNIGHT_H
 
 #include "piece.h"
+#include "game.h"
+
+extern Game *game;
 
 class Knight: public Piece
 {
