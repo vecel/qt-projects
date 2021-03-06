@@ -16,56 +16,24 @@ QList<Tile *> Knight::possibleMoves()
 {
     QList<Tile *> moves;
 
-    int x, y;
-
-    if(board_x - 2 >= 0 && board_y - 1 >= 0){
-        x = board_x - 2;
-        y = board_y - 1;
-        if(game->getPieceAt(x, y) == nullptr) moves.push_back(game->getTileAt(x, y));
-        else if(game->getPieceAt(x, y)->getColor() != this->color) moves.push_back(game->getTileAt(x, y));
-    }
-    if(board_x - 2 >= 0 && board_y + 1 <= 7){
-        x = board_x - 2;
-        y = board_y + 1;
-        if(game->getPieceAt(x, y) == nullptr) moves.push_back(game->getTileAt(x, y));
-        else if(game->getPieceAt(x, y)->getColor() != this->color) moves.push_back(game->getTileAt(x, y));
-    }
-    if(board_x + 2 <= 7 && board_y - 1 >= 0){
-        x = board_x + 2;
-        y = board_y - 1;
-        if(game->getPieceAt(x, y) == nullptr) moves.push_back(game->getTileAt(x, y));
-        else if(game->getPieceAt(x, y)->getColor() != this->color) moves.push_back(game->getTileAt(x, y));
-    }
-    if(board_x + 2 <= 7 && board_y + 1 <= 7){
-        x = board_x + 2;
-        y = board_y + 1;
-        if(game->getPieceAt(x, y) == nullptr) moves.push_back(game->getTileAt(x, y));
-        else if(game->getPieceAt(x, y)->getColor() != this->color) moves.push_back(game->getTileAt(x, y));
-    }
-    if(board_y - 2 >= 0 && board_x - 1 >= 0){
-        x = board_x - 1;
-        y = board_y - 2;
-        if(game->getPieceAt(x, y) == nullptr) moves.push_back(game->getTileAt(x, y));
-        else if(game->getPieceAt(x, y)->getColor() != this->color) moves.push_back(game->getTileAt(x, y));
-    }
-    if(board_y - 2 >= 0 && board_x + 1 <= 7){
-        x = board_x + 1;
-        y = board_y - 2;
-        if(game->getPieceAt(x, y) == nullptr) moves.push_back(game->getTileAt(x, y));
-        else if(game->getPieceAt(x, y)->getColor() != this->color) moves.push_back(game->getTileAt(x, y));
-    }
-    if(board_y + 2 <= 7 && board_x - 1 >= 0){
-        x = board_x - 1;
-        y = board_y + 2;
-        if(game->getPieceAt(x, y) == nullptr) moves.push_back(game->getTileAt(x, y));
-        else if(game->getPieceAt(x, y)->getColor() != this->color) moves.push_back(game->getTileAt(x, y));
-    }
-    if(board_y + 2 <= 7 && board_x + 1 <= 7){
-        x = board_x + 1;
-        y = board_y + 2;
-        if(game->getPieceAt(x, y) == nullptr) moves.push_back(game->getTileAt(x, y));
-        else if(game->getPieceAt(x, y)->getColor() != this->color) moves.push_back(game->getTileAt(x, y));
-    }
+    if(isTileFreeToMove(board_x - 2, board_y - 1)) moves.push_back(game->getTileAt(board_x - 2, board_y - 1));
+    if(isTileFreeToMove(board_x - 2, board_y + 1)) moves.push_back(game->getTileAt(board_x - 2, board_y + 1));
+    if(isTileFreeToMove(board_x + 2, board_y - 1)) moves.push_back(game->getTileAt(board_x + 2, board_y - 1));
+    if(isTileFreeToMove(board_x + 2, board_y + 1)) moves.push_back(game->getTileAt(board_x + 2, board_y + 1));
+    if(isTileFreeToMove(board_x - 1, board_y - 2)) moves.push_back(game->getTileAt(board_x - 1, board_y - 2));
+    if(isTileFreeToMove(board_x - 1, board_y + 2)) moves.push_back(game->getTileAt(board_x - 1, board_y + 2));
+    if(isTileFreeToMove(board_x + 1, board_y - 2)) moves.push_back(game->getTileAt(board_x + 1, board_y - 2));
+    if(isTileFreeToMove(board_x + 1, board_y + 2)) moves.push_back(game->getTileAt(board_x + 1, board_y + 2));
 
     return moves;
+}
+
+bool Knight::isTileFreeToMove(int x, int y)
+{
+    // return false if tile is off the board
+    if(x < 0 || x > 7 || y < 0 || y > 7) return false;
+
+    if(game->getPieceAt(x, y) == nullptr) return true;
+    else if(game->getPieceAt(x, y)->getColor() != this->color) return true;
+    return false;
 }

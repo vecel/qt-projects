@@ -19,12 +19,7 @@ Game::Game()
 
     selectedPiece = nullptr;
 
-    // just for test
-    for(int i = 0; i < 8; ++i){
-        for(int k = 0; k < 8; ++k){
-            if(board->getPiece(i, k) == nullptr) qDebug() << "nullptr";
-        }
-    }
+    turn = Piece::WHITE;
 
     // create a view
     QGraphicsView *view = new QGraphicsView(this);
@@ -79,4 +74,15 @@ void Game::setSelectedPiece(Piece *piece)
 Piece *Game::getSelectedPiece()
 {
     return selectedPiece;
+}
+
+void Game::changeTurn()
+{
+    if(turn == Piece::WHITE) turn = Piece::BLACK;
+    else turn = Piece::WHITE;
+}
+
+Piece::COLOR Game::getTurn()
+{
+    return turn;
 }

@@ -25,11 +25,13 @@ public:
     void forbidCastle(); // set rightToCastling false
     bool isAllowedToCastle(); // return rightToCastling
 
+    bool rightToCastling = true; // true if rook or king wasn't moved, false if so
+
     COLOR color; // color of the piece
     int board_x, board_y; // coordinates on the board
 
 private:
-    bool rightToCastling = true; // true if rook wasn't moved, false if so
+    void setNewSelectedPiece();
 };
 
 #endif // PIECE_H

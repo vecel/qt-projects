@@ -11,6 +11,9 @@ class Knight: public Piece
 public:
     Knight(COLOR col, int x, int y);
     QList<Tile*> possibleMoves();
+
+private:
+    bool isTileFreeToMove(int x, int y); // to make code clearer
 };
 
 #endif // KNIGHT_H

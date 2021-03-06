@@ -4,9 +4,13 @@
 
 #include <QDebug>
 
-Tile::Tile()
+Tile::Tile(QBrush brush)
 {
     setRect(0, 0, 64, 64);
+
+    this->brush = new QBrush(brush);
+
+    setBrush(*(this->brush));
 }
 
 void Tile::select()
@@ -17,7 +21,7 @@ void Tile::select()
 
 void Tile::unselect()
 {
-    setBrush(QBrush(Qt::white));
+    setBrush(*brush);
     selected = false;
 }
 

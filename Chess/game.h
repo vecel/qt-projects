@@ -21,6 +21,9 @@ public:
     void setSelectedPiece(Piece *piece); // set selectedPiece pointer to pressed piece
     Piece * getSelectedPiece(); // return selectedPiece pointer
 
+    void changeTurn(); // change player turns white <-> black
+    Piece::COLOR getTurn(); // return turn
+
 private:
     Board *board; // pointer to a chessboard
 
@@ -28,6 +31,8 @@ private:
     // selectedPiece can be moved by pressing target tile or a piece on it
     // pressing anywhere else sets selectedPiece to nullptr
     Piece *selectedPiece;
+
+    Piece::COLOR turn;
 };
 
 #endif // GAME_H
