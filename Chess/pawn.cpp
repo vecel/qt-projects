@@ -16,6 +16,7 @@ Pawn::Pawn(COLOR col, int x, int y)
 
 QList<Tile *> Pawn::possibleMoves()
 {
+<<<<<<< HEAD
     QList<Tile *> moves;
     if(color == WHITE){
         // move up
@@ -68,4 +69,25 @@ QList<Tile *> Pawn::possibleMoves()
     }
 
     return moves;
+=======
+    QList<Tile *> tiles;
+    if(color == WHITE){
+//        tiles.push_back();
+//        tiles.push_back();
+    }
+    return tiles;
+}
+
+void Pawn::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    if(event->type() == QEvent::GraphicsSceneMousePress){
+        qDebug() << "pawn pressed";
+
+        QList<Tile *> tilesToMove = possibleMoves();
+        for(int i = 0; i < tilesToMove.size(); ++i){
+            tilesToMove.at(i)->selectTile();
+        }
+    }
+    qDebug() << game->mouseGrabberItem();
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 }

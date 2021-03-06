@@ -19,6 +19,7 @@ QList<Tile *> Bishop::possibleMoves()
 {
     QList<Tile *> moves;
 
+<<<<<<< HEAD
     // add diagonal tiles to the list
     // loops provide tiles from each diagonal
     // in each loop check if there is no piece at [i,k] add tile to the list
@@ -74,3 +75,40 @@ QList<Tile *> Bishop::possibleMoves()
 //    }
 //    qDebug() << typeid (this).name();
 //}
+=======
+    /* take into account if tile is occupied and color of occupying piece */
+
+    // add diagonal tiles to the list
+    // loops provide tiles from each diagonal
+    for(int i = board_x - 1, k = board_y - 1; i >= 0 && k >= 0; --i, --k){
+        moves.push_back(game->getTile(i, k));
+    }
+    for(int i = board_x - 1, k = board_y + 1; i >= 0 && k <= 7; --i, ++k){
+        moves.push_back(game->getTile(i, k));
+    }
+    for(int i = board_x + 1, k = board_y - 1; i <= 7 && k >= 0; ++i, --k){
+        moves.push_back(game->getTile(i, k));
+    }
+    for(int i = board_x + 1, k = board_y + 1; i <= 7 && k <= 7; ++i, ++k){
+        moves.push_back(game->getTile(i, k));
+    }
+    return moves;
+}
+
+void Bishop::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    if(event->type() == QEvent::GraphicsSceneMousePress){
+
+        // get tiles that piece can move to
+        QList<Tile *> moves = possibleMoves();
+
+        // paint these tiles
+        for(int i = 0; i < moves.size(); ++i){
+            moves.at(i)->selectTile();
+        }
+
+        // write in the console color of pressed piece color
+        qDebug() << this->getColor();
+    }
+}
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d

@@ -12,12 +12,18 @@ class Board: public QGraphicsItemGroup
 public:
     Board(int origin_x = 144, int origin_y = 44);
 
+<<<<<<< HEAD
     Tile *getTile(int x, int y); // return tile from [x,y] coordinates
     Piece * getPiece(int x, int y); // return piece from [x,y] coordinates
+=======
+    // return tile at x, y coordinates
+    Tile *getTile(int x, int y);
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 
     // place pieces to their correct positions
     void setUpPieces();
 
+<<<<<<< HEAD
     // mouse press event for board and its tiles
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
 
@@ -33,10 +39,13 @@ public:
     // check if player's king is safe after making a move
     bool isKingSafe();
 
+=======
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 private:
     Tile *tileBoard[8][8]; // chessboard
     Piece *board[8][8]; // handle pieces pointers
 
+<<<<<<< HEAD
     // pointer to piece that was captured, used in undoMove function, set in move function
     Piece *capturedPiece = nullptr;
 
@@ -67,6 +76,10 @@ private:
 
     // check if there is a king at [x,y] position if that position exists at all, used in isNextToKing() function
     bool isKingAt(int x, int y);
+=======
+    // place piece on the chessboard
+    void addPiece(Piece *piece);
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 };
 
 #endif // BOARD_H

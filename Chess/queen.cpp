@@ -1,5 +1,8 @@
 #include "queen.h"
+<<<<<<< HEAD
 #include <QGraphicsSceneMouseEvent>
+=======
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 #include <QDebug>
 
 Queen::Queen(COLOR col, int x, int y)
@@ -16,6 +19,7 @@ Queen::Queen(COLOR col, int x, int y)
 
 QList<Tile *> Queen::possibleMoves()
 {
+<<<<<<< HEAD
     QList<Tile *> moves;
 
     // rook movement
@@ -79,4 +83,7 @@ QList<Tile *> Queen::possibleMoves()
     }
 
     return moves;
+=======
+
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 }

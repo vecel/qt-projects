@@ -1,6 +1,9 @@
 #include "rook.h"
+<<<<<<< HEAD
 #include <QDebug>
 #include <QGraphicsSceneMouseEvent>
+=======
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 
 Rook::Rook(COLOR col, int x, int y)
 {
@@ -16,6 +19,7 @@ Rook::Rook(COLOR col, int x, int y)
 
 QList<Tile *> Rook::possibleMoves()
 {
+<<<<<<< HEAD
     QList<Tile *> moves;
 
     for(int i = board_x - 1; i >= 0; --i){
@@ -48,4 +52,7 @@ QList<Tile *> Rook::possibleMoves()
     }
 
     return moves;
+=======
+    return QList<Tile*>();
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 }

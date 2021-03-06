@@ -8,6 +8,7 @@
 #include "bishop.h"
 #include "king.h"
 #include <QGraphicsScene>
+<<<<<<< HEAD
 #include <QGraphicsSceneMouseEvent>
 
 #include <QDebug>
@@ -15,6 +16,21 @@
 Board::Board(int origin_x, int origin_y)
 {
     setUpChessboard();
+=======
+
+Board::Board(int origin_x, int origin_y)
+{
+    // set up a chessboard
+    for(int i = 0; i < 8; ++i){
+        for(int k = 0; k < 8; ++k){
+            // create new tile and add it to group
+            tileBoard[k][i] = new Tile();
+            tileBoard[k][i]->setPos(64 * k, 64 * i);
+            addToGroup(tileBoard[k][i]);
+        }
+    }
+
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
     // set board position to center
     setPos(origin_x, origin_y);
 }
@@ -24,6 +40,7 @@ Tile *Board::getTile(int x, int y)
     return tileBoard[x][y];
 }
 
+<<<<<<< HEAD
 Piece *Board::getPiece(int x, int y)
 {
     return board[x][y];
@@ -36,6 +53,10 @@ void Board::setUpPieces()
             qDebug() << typeid(board[i][k]).name() << " " << i << " " << k;
         }
     }
+=======
+void Board::setUpPieces()
+{
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
     addPiece(new Rook(Piece::WHITE, 0, 7));
     addPiece(new Rook(Piece::WHITE, 7, 7));
 
@@ -69,6 +90,7 @@ void Board::setUpPieces()
     }
 
     // test
+<<<<<<< HEAD
     addPiece(new Bishop(Piece::WHITE, 4, 4));
     addPiece(new Rook(Piece::BLACK, 5, 5));
 }
@@ -199,6 +221,9 @@ void Board::setUpChessboard()
             addToGroup(tileBoard[k][i]);
         }
     }
+=======
+    //addPiece(new Bishop(Piece::WHITE, 4, 4));
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 }
 
 void Board::addPiece(Piece *piece)
@@ -215,6 +240,7 @@ void Board::addPiece(Piece *piece)
 
     scene()->addItem(piece);
 }
+<<<<<<< HEAD
 
 bool Board::isAttackedByKnight(int pos_x, int pos_y)
 {
@@ -376,3 +402,5 @@ bool Board::isKingAt(int x, int y)
     }
     return false;
 }
+=======
+>>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
