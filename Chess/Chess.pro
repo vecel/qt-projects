@@ -16,10 +16,7 @@ SOURCES += \
     knight.cpp \
     main.cpp \
     pawn.cpp \
-<<<<<<< HEAD
     piece.cpp \
-=======
->>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
     queen.cpp \
     rook.cpp \
     tile.cpp

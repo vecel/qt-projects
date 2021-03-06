@@ -1,8 +1,5 @@
 #include "king.h"
-<<<<<<< HEAD
 #include "rook.h"
-=======
->>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 
 King::King(COLOR col, int x, int y)
 {
@@ -18,7 +15,6 @@ King::King(COLOR col, int x, int y)
 
 QList<Tile *> King::possibleMoves()
 {
-<<<<<<< HEAD
     QList<Tile *> moves;
 
     if(isTileFreeToMove(board_x - 1, board_y - 1)) moves.push_back(game->getTileAt(board_x - 1, board_y - 1));
@@ -66,7 +62,4 @@ bool King::isTileFreeToMove(int x, int y)
     if(game->getPieceAt(x, y) == nullptr) return true;
     else if(game->getPieceAt(x, y)->getColor() != this->color) return true;
     return false;
-=======
-
->>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 }

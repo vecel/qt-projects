@@ -3,16 +3,12 @@
 
 #include <QGraphicsScene>
 #include "board.h"
-<<<<<<< HEAD
 #include "piece.h"
-=======
->>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 
 class Game: public QGraphicsScene
 {
 public:
     Game();
-<<<<<<< HEAD
     Board * getBoard(); // return pointer to the board that is displayed
     Tile * getTileAt(int x, int y); // return pointer to a tile from [x,y] coordinates
     Piece * getPieceAt(int x, int y); // return pointer to a piece from [x,y] coordinates
@@ -37,14 +33,6 @@ private:
     Piece *selectedPiece;
 
     Piece::COLOR turn;
-=======
-    Board* getBoard();
-    Tile* getTile(int x, int y);
-//    void mousePressEvent(QGraphicsSceneMouseEvent *event);
-
-private:
-    Board *board;
->>>>>>> b0bc44a16b9cf6f07934d9f2d421a0f6c088a58d
 };
 
 #endif // GAME_H
